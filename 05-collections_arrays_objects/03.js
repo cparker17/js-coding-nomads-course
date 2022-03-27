@@ -70,3 +70,55 @@ stores =  [
     [ '4003IN', 'Target', 'IN', 'North', 'Attica' ],
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
+
+
+//#1
+for (let i = 0; i < stores.length; i++) {
+    console.log(stores[i][4]);
+}
+
+//#2
+for (let i = 0; i < stores.length; i++) {
+    if (stores[i][2] === "CA") {
+        console.log(stores[i][1]);
+    }
+}
+
+//#3
+let targetStoreCount = 0;
+for (let i = 0; i < stores.length; i++) {
+    if (stores[i][1] === "Target") {
+        targetStoreCount++;
+    }
+}
+console.log(targetStoreCount);
+
+//#4
+targetStoreCount = 0;
+let circuitCityCount = 0;
+let bestBuyCount = 0;
+let kMartCount = 0;
+let applianceDirectCount = 0;
+for (let i = 0; i < stores.length; i++) {
+    switch (stores[i][1]) {
+        case 'Target' : 
+            targetStoreCount++;
+            break;
+        case 'Circuit City' : 
+            circuitCityCount++;
+            break;
+        case 'Best Buy' : 
+            bestBuyCount++;
+            break;
+        case 'K-Mart' : 
+            kMartCount++;
+            break;
+        default : 
+            applianceDirectCount++;
+    }
+}
+console.log(`There are ${targetStoreCount} Target stores in total.`)
+console.log(`There are ${circuitCityCount} Circuit City stores in total.`)
+console.log(`There are ${kMartCount} K-Mart stores in total.`)
+console.log(`There are ${bestBuyCount} Best Buy stores in total.`)
+console.log(`There are ${applianceDirectCount} Appliance Direct stores in total.`)

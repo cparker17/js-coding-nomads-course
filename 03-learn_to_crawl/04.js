@@ -21,5 +21,18 @@
  * with clear and descriptive names.
  */
 
+let num1 = 1234;
+let num2 = 4567;
+let num3 = 2345;
+let luckyNumber = 7;
+
+console.log("Sum of all numbers:", num1 + num2 + num3 + luckyNumber);
+console.log("Largest minus two smallest numbers:", num2 - num1 - num3);
+console.log("Product of all numbers:", num1 * num2 * num3);
+console.log("Largest divided by difference of smallest:", num2 / (num3 - num1));
+console.log("First number modulus 7:", num1 % luckyNumber);
+console.log("Second number modulus 7:", num2 % luckyNumber);
+console.log("Third number modulus 7:", num3 % luckyNumber);
+
 let result = 0
 console.log("Label", result)

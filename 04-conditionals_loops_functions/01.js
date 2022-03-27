@@ -1,5 +1,5 @@
 function getRandomNumber(){
-    return Math.floor((Math.random() * 10) + 1);
+    return Math.floor((Math.random() * 100) + 1);
 }
 
 /**
@@ -40,7 +40,38 @@ function getRandomNumber(){
  *
  */
 
-let randomNumber = getRandomNumber() + getRandomNumber()
+age = getRandomNumber();
+price = 0;
+fare = "";
+function checkForFree () {
+    if (getRandomNumber() == 7) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
-console.log(randomNumber)
+if (age < 5) {
+    fare = "Free";
+} else if (age < 13) {
+    price = 5;
+    fare = "Child Fare";
+} else if (age < 21) {
+    price = 10;
+    fare = "Teenager Fare";
+} else if (age < 30) {
+    price = 15;
+    fare = "Young Person Fare";
+} else if (age < 65) {
+    price = 20;
+    fare = "Adult Fare";
+} else {
+    price = 7;
+    fare = "Pensioner Fare";
+}
 
+if ((price != 0 ) && (checkForFree() == true)) {
+    console.log("Lucky You!  Today you get to ride free of charge!");
+} else {
+    console.log(`You pay the ${fare}, that will be ${price} dollars please.`);
+}

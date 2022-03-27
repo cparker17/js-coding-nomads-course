@@ -22,11 +22,44 @@
 
 // Write your code here:
 
+//#1
+function KtoC(temp) {
+    return temp - 273.15;
+}
 
+function CtoK(temp) {
+    return temp + 273.15;
+}
 
+function KtoF(temp) {
+    return (temp - 273.15) * (9/5) + 32;
+}
 
+function FtoK(temp) {
+    return (temp * (5/9)) + 459.67;
+}
 
+//#2
+function pythagoras(side1, side2) {
+    return Math.sqrt(side1 ** 2 + side2 **2);
+}
 
+//#3
+function inchToCm(inches) {
+    return inches * 2.54;
+}
+
+function CmToInch(centimeters) {
+    return centimeters / 2.54;
+}
+
+function MToKm (meters) {
+    return meters / 1000;
+}
+
+function KmToM (kilometers) {
+    return kilometers * 1000;
+}
 
 
 

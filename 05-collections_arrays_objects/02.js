@@ -17,4 +17,25 @@ lengths = [
  */
 
 
+//#1
+function cmToInches (valueInCm) {
+    return valueInCm / 2.54;
+}
+
+let lengthsInInches = [];
+for (let i = 0; i < lengths.length; i++) {
+    lengthsInInches[i] = cmToInches(lengths[i]);
+}
+console.log(lengthsInInches);
+
+//#2
+function averageLength (lengths) {
+    let sum = 0;
+    for (let i = 0; i < lengths.length; i++) {
+        sum += lengths[i];
+    }
+    return sum / lengths.length;
+}
+
+console.log(`The average length in cm is ${averageLength(lengths)}, which is ${averageLength(lengthsInInches)} in inches.`)
 

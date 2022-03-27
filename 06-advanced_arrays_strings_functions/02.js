@@ -938,3 +938,104 @@ let expenses = [
     "Bank of America - Credit Card",
   ],
 ];
+
+/* 1. Output the total amount of expenses for 2017 and 2018.
+ * 2. Output the total amount paid for Groceries.
+ * 3. Output the total difference in each account after all transactions. So if
+ *    $100 was deposited into the account and $50 spent, then the total change
+ *    would be $50.
+ * 4. Create a new array that only has the date, description, and amount of rows
+ *    that have the category "Eating Out".
+ * 5. Create another array with only the date, description and amount of rows
+ *    that have the category "Gear and Clothing".
+ */
+
+//#1
+expenses.shift();
+let expensesSum = 0;
+expenses.forEach(expense => {
+    if (expense[3] < 0 && expense[0].match(/2017/)) {
+      expensesSum += expense[3];
+    }
+})
+console.log(expensesSum);
+
+expensesSum = 0;
+expenses.forEach(expense => {
+    if (expense[3] < 0 && expense[0].match(/2018/)) {
+      expensesSum += expense[3];
+    }
+})
+console.log(expensesSum);
+
+//#2
+expensesSum = 0;
+expenses.forEach(expense => {
+    if (expense[3] < 0 && expense[2].match(/Groceries/)) {
+      expensesSum += expense[3];
+    }
+})
+console.log(expensesSum);
+
+//#3
+expensesSum = 0;
+expenses.forEach(expense => {
+    if (expense[3] < 0 && expense[4].match(/Family Checking/)) {
+      expensesSum += expense[3];
+    }
+})
+console.log("Family Checking: $" + expensesSum);
+
+expensesSum = 0;
+expenses.forEach(expense => {
+    if (expense[3] < 0 && expense[4].match(/Alaska Airlines Visa/)) {
+      expensesSum += expense[3];
+    }
+})
+console.log("Alaska Airlines Visa: $" + expensesSum);
+
+expensesSum = 0;
+expenses.forEach(expense => {
+    if (expense[3] < 0 && expense[4].match(/American Express/)) {
+      expensesSum += expense[3];
+    }
+  })
+console.log("American Express: $" + expensesSum);
+
+expensesSum = 0;
+expenses.forEach(expense => {
+
+    if (expense[3] < 0 && expense[4].match(/Visa Rewards/)) {
+      expensesSum += expense[3];
+    }
+})
+console.log("Visa Rewards: $" + expensesSum);
+
+//#4
+let eatingOutExpenses = [];
+expenses.forEach(expense => {
+    if (expense[2].match(/Eating Out/)) {
+      let eatingOutExpense = [];
+      eatingOutExpense.push(expense[0]);
+      eatingOutExpense.push(expense[1]);
+      eatingOutExpense.push(expense[3]);
+      console.log(eatingOutExpense);
+      eatingOutExpenses.push(eatingOutExpense);
+    }
+})
+
+//console.log(eatingOutExpenses);
+
+//#5
+gearAndClothingExpenses = [];
+expenses.forEach(expense => {
+    if (expense[2].match(/Gear/)) {
+      let gearAndClothingExpense = [];
+      gearAndClothingExpense.push(expense[0]);
+      gearAndClothingExpense.push(expense[1]);
+      gearAndClothingExpense.push(expense[3]);
+      gearAndClothingExpenses.push(gearAndClothingExpense);
+    }
+})
+
+console.log(gearAndClothingExpenses);
