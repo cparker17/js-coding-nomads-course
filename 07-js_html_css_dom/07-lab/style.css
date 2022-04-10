@@ -1,5 +1,6 @@
 * {
   font-family: sans-serif;
+  font-size: 100%;
 }
 
 h1 {
@@ -20,16 +21,17 @@ li {
 }
 
 .head {
-  font-size: 24px;
+  font-size: 2rem;
 }
 .body {
   color: rgb(142, 140, 140);
   margin-bottom: 50px;
+  font-size: 1rem;
 }
 
 .homepage {
   color: red;
-  font-size: 14px;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   text-underline-offset: 5px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +16,7 @@
       <li>Kitchens</li>
     </ul>
     <div id="block" class="message">
-      <p class="head">
+      <p id="head" class="head">
         It's Easy to Do Business With Parker Design Build Remodel
       </p>
       <div class="body">
@@ -33,6 +33,18 @@
       let block = document.getElementById("block");
       block.style.backgroundColor = "white";
       block.style.color = "black";
+    })
+  </script>
+  <button id="increaseFont">+</button>
+  <button id="decreaseFont">-</button>
+  <script>
+    let plusFont = document.getElementById("increaseFont");
+    plusFont.addEventListener("click", () => {
+      document.getElementById("html").style.fontSize = "40px";
+    })
+    let minusFont = document.getElementById("decreaseFont");
+    minusFont.addEventListener("click", () => {
+      document.getElementById("html").style.fontSize = "15px";
     })
   </script>
   </body>
