@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PDBR</title>
+  </head>
+  <body>
+    <header><h1>Parker Design Build Remodel</h1></header>
+    <h2 class="container">Services</h2>
+    <ul>
+      <li>Whole House Renovations</li>
+      <li>Additions</li>
+      <li>Kitchens</li>
+    </ul>
+    <div id="block" class="message">
+      <p class="head">
+        It's Easy to Do Business With Parker Design Build Remodel
+      </p>
+      <div class="body">
+        <p>We answer every call and email personally.</p>
+        <p>To get started, fill out the contact form below or</p>
+        <p>Schedule a Call Now!</p>
+      </div>
+      <a class="homepage" href="http:www.parkerdesignbuild.com">GET STARTED &#9658</a>
+    </div>
+  <button id="lightModeButton" class = "darkMode">Dark Mode</button>
+  <script>
+    let light = document.getElementById("lightModeButton");
+    light.addEventListener("click", () => {
+      let block = document.getElementById("block");
+      block.style.backgroundColor = "white";
+      block.style.color = "black";
+    })
+  </script>
+  </body>
+  <footer>MHIC License #100001 | MHBR #7694</footer>
+  <footer>Copyright &copy 2022 by Parker Design Build Remodel</footer>
+</html>

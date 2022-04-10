@@ -1023,8 +1023,7 @@ expenses.forEach(expense => {
       eatingOutExpenses.push(eatingOutExpense);
     }
 })
-
-//console.log(eatingOutExpenses);
+console.log(eatingOutExpenses);
 
 //#5
 gearAndClothingExpenses = [];
@@ -1037,5 +1036,4 @@ expenses.forEach(expense => {
       gearAndClothingExpenses.push(gearAndClothingExpense);
     }
 })
-
 console.log(gearAndClothingExpenses);
